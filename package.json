@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "dev": "sass scss:css --watch",
+    "build": "sass sass:build --style=compressed --no-source-map"
+  },
   "dependencies": {
     "sass": "^1.89.2"
   }
