@@ -87,11 +87,11 @@ a {
   content: "";
   width: 2rem;
   aspect-ratio: 1;
-  background: url("/images/ico_archive.svg") no-repeat center;
+  background: url("../images/ico_archive.svg") no-repeat center;
   background-size: contain;
 }
 .utility .btn-archive::before {
-  background: url("/images/ico_archive_white.svg") no-repeat center;
+  background: url("../images/ico_archive_white.svg") no-repeat center;
   background-size: contain;
 }
 .utility .btn-archive {
@@ -109,11 +109,11 @@ a {
   content: "";
   width: 2rem;
   aspect-ratio: 1;
-  background: url("/images/ico_calendar.svg") no-repeat center;
+  background: url("../images/ico_calendar.svg") no-repeat center;
   background-size: contain;
 }
 .utility .btn-calender::before {
-  background: url("/images/ico_calendar_white.svg") no-repeat center;
+  background: url("../images/ico_calendar_white.svg") no-repeat center;
   background-size: contain;
 }
 .utility .btn-calender {
