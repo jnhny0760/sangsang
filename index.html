@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KT&G 상상마당</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script type="module" src="./js/global.js"></script>
+    <link rel="shortcut icon" href="#">
 </head>
 <body>
     <header class="header">
@@ -17,6 +19,7 @@
             <li><a href="/">Daechi</a></li>
             <li><a href="/">Busan</a></li>
         </ul>
+        <button class="btn-search" aria-label="검색"></button>
         <div class="utility">
             <div> 
                 <a href="/" class="btn-archive">Archive</a>
@@ -24,5 +27,12 @@
             </div>
         </div>
     </header>
+    <dialog class="search">
+        <form>
+            <input type="search" name="" id="" placeholder="검색어를 입력해주세요">
+            <button class="btn-search" aria-label="검색"></button>
+        </form>
+        <button class="btn-close" aria-label="닫기"></button>
+    </dialog>
 </body>
 </html>
