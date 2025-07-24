@@ -1,3 +1,65 @@
+@import url(https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css) layer(Reset);
+:is(*, *::before, *::after) {
+  content: "";
+  font-family: "Pretendard Variable";
+}
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.ally-hidden {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.header {
+  max-width: 160rem;
+  margin: auto;
+}
+
+.logo img {
+  width: 15rem;
+}
+
+.familysite {
+  display: flex;
+  gap: 2rem;
+}
+.familysite a {
+  font-size: 5rem;
+  font-weight: 800;
+}
+.familysite li {
+  transition: 0.3s;
+}
+.familysite li:nth-child(1):hover {
+  color: fuchsia;
+}
+.familysite li:nth-child(2):hover {
+  color: yellowgreen;
+}
+.familysite li:nth-child(3):hover {
+  color: orange;
+}
+.familysite li:nth-child(4):hover {
+  color: purple;
+}
+.familysite li:nth-child(5):hover {
+  color: skyblue;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 /*# sourceMappingURL=index.css.map */
