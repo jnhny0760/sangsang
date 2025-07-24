@@ -1,0 +1,42 @@
+@use "../abstracts/" as *;
+
+
+.btn-archive {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    gap: 0.4rem;
+    &::before {
+        content: '';
+        width: 2rem;
+        aspect-ratio: 1;
+        @include background("ico_archive.svg", center, null, contain, size, contain);
+        .utility & {
+            @include background("ico_archive_white.svg", center, null, contain, size, contain);
+        }
+    }
+    .utility & {
+        color: #fff;
+    }
+}
+
+.btn-calender {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    gap: 0.4rem;
+    &::before {
+        content: '';
+        width: 2rem;
+        aspect-ratio: 1;
+        @include background("ico_calender.svg", center, null, contain, size, contain);
+        .utility & {
+            @include background("ico_calender_white.svg", center, null, contain, size, contain);
+        }
+    }
+    .utility & {
+        color: #fff;
+    }
+}

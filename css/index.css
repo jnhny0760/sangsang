@@ -23,7 +23,21 @@ body {
 
 .header {
   max-width: 160rem;
-  margin: auto;
+  margin: 10rem auto;
+}
+
+.utility {
+  position: absolute;
+  inset: 0 0 auto;
+  background-color: #000;
+  padding-block: 2rem;
+}
+.utility > div {
+  width: 160rem;
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+  margin-inline: auto;
 }
 
 .logo img {
@@ -60,6 +74,50 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.btn-archive {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  gap: 0.4rem;
+}
+.btn-archive::before {
+  content: "";
+  width: 2rem;
+  aspect-ratio: 1;
+  background: url("/images/ico_archive.svg") no-repeat center;
+  background-size: contain;
+}
+.utility .btn-archive::before {
+  background: url("/images/ico_archive_white.svg") no-repeat center;
+  background-size: contain;
+}
+.utility .btn-archive {
+  color: #fff;
+}
+
+.btn-calender {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  gap: 0.4rem;
+}
+.btn-calender::before {
+  content: "";
+  width: 2rem;
+  aspect-ratio: 1;
+  background: url("/images/ico_calender.svg") no-repeat center;
+  background-size: contain;
+}
+.utility .btn-calender::before {
+  background: url("/images/ico_calender_white.svg") no-repeat center;
+  background-size: contain;
+}
+.utility .btn-calender {
+  color: #fff;
 }
 
 /*# sourceMappingURL=index.css.map */
