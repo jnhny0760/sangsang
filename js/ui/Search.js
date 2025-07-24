@@ -8,16 +8,18 @@ export const Search = (url) => {
 
     openSearch.addEventListener('click', () => {
         SearchDialog.show();
-    })
+    });
 
     closeSearch.addEventListener("click", () => {
         SearchDialog.close();
-    })
+    });
 
     SearchBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+
         const isValue = input.value;
         
-        location.href = `/${url}?searchKeyword=${isValue}`;
+        location.href = `/${url}?searchKeyWord=${isValue}`;
         return isValue;
-    })
-}
+    });
+};
