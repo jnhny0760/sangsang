@@ -1,6 +1,9 @@
 @use "../abstracts/" as *;
 
 .header {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: 1fr 1fr;
     max-width: $websize;
-    margin: 10rem auto;
+    margin: 10rem auto auto;
 }

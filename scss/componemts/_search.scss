@@ -1,0 +1,23 @@
+@use "../abstracts/" as *;
+
+.search {
+    position: absolute;
+    top: 10rem;
+    padding: 0 0 4rem;
+    width: $websize;
+    height: 10rem;
+    align-content: center;
+    border: none;
+    border-bottom: 0.1rem solid #000;
+    form {
+        display: grid;
+        grid-template-columns: 1fr min-content;
+        input {
+            font-size: 5rem;
+            font-weight: 900;
+            height: 10rem;
+            border: none;
+            outline: none;
+        }
+    }
+}
