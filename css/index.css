@@ -22,8 +22,11 @@ body {
 }
 
 .header {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: 1fr 1fr;
   max-width: 160rem;
-  margin: 10rem auto;
+  margin: 10rem auto auto;
 }
 
 .utility {
@@ -76,6 +79,18 @@ a {
   color: inherit;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
 .btn-archive {
   display: inline-flex;
   align-items: center;
@@ -118,6 +133,55 @@ a {
 }
 .utility .btn-calender {
   color: #fff;
+}
+
+.btn-search {
+  width: 5rem;
+  aspect-ratio: 1;
+  background: url("../images/ico_search.svg") no-repeat center;
+  background-size: contain;
+}
+.header .btn-search {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  align-self: center;
+}
+.search .btn-search {
+  translate: 0 2.5rem;
+}
+
+.btn-close {
+  width: 3rem;
+  aspect-ratio: 1;
+  background: url("../images/ico_close.svg") no-repeat center;
+  background-size: contain;
+}
+.search .btn-close {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+}
+
+.search {
+  position: absolute;
+  top: 10rem;
+  padding: 0 0 4rem;
+  width: 160rem;
+  height: 10rem;
+  align-content: center;
+  border: none;
+  border-bottom: 0.1rem solid #000;
+}
+.search form {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+}
+.search form input {
+  font-size: 5rem;
+  font-weight: 900;
+  height: 10rem;
+  border: none;
+  outline: none;
 }
 
 /*# sourceMappingURL=index.css.map */
