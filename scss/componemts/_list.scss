@@ -1,0 +1,88 @@
+@use "../abstracts/" as *;
+
+.list-hash {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+    button {
+        font-size: 1.6rem;
+        padding: 0.5rem 1rem;
+        &.--active {
+            background-color: #fff;
+            border: 1px solid #000;
+        }
+    }
+}
+
+.academy_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 4rem 2rem;
+    a {
+        position: relative;
+        display: grid;
+        .thumbnail {
+            order: 1;
+        }
+        .category {
+            order: 2;
+            font-size: 1.6rem;
+            font-weight: 600;
+            padding-block: 1rem;
+        }
+        .title {
+            order: 3;
+            font-size: 2.2rem;
+            font-weight: 700;
+            padding: 2rem 0;
+            min-height: 6rem;
+        }
+        .date {
+            order: 4;
+            font-size: 1.8rem;
+            display: flex;
+            gap: 1rem;
+            padding-top: 1rem;
+        }
+    }
+}
+
+.thumbnail {
+    position: relative;
+    img {
+        width: 100%;
+        .academy_list {
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: rgba(37, 95, 137, 0.5);
+        inset: 0;
+        z-index: 1;
+        opacity: 0;
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+.badge {
+    @include category;
+    background-color: var(--bg);
+    display: inline-flex;
+    font-size: 1.6rem;
+    font-weight: 900;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    .academy_list & {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+}

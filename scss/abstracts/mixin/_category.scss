@@ -1,0 +1,21 @@
+$categoryBg: ('all','hongdae','nonsan','chuncheon','daechi','busan');
+
+@mixin category{
+    @each $className in $categoryBg {
+        &.#{$className} {
+            @if $className == 'all'{
+                --bg: #000;
+            } @else if $className == 'hongdae'{
+                --bg: fuchsia;                
+            } @else if $className == 'nonsan'{
+                --bg: yellowgreen;                
+            } @else if $className == 'chuncheon'{
+                --bg: orange;                
+            } @else if $className == 'daechi'{
+                --bg: purple;                
+            } @else if $className == 'busan'{
+                --bg: skyblue;                
+            }
+        }
+    }
+}

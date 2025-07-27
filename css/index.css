@@ -71,6 +71,11 @@ body {
   width: 160rem;
 }
 
+.mx-auto, .academy-now {
+  width: 160rem;
+  margin-inline: auto;
+}
+
 .logo img {
   width: 15rem;
 }
@@ -191,6 +196,21 @@ input[type=search]::-webkit-search-results-decoration {
   right: 0;
 }
 
+.button-more {
+  display: inline-flex;
+  width: 8rem;
+  border-bottom: 0.2rem solid #000;
+  justify-content: end;
+}
+.button-more::after {
+  content: "";
+  border-left: 0.2rem solid #000;
+  height: 3rem;
+  font-size: 0;
+  rotate: -45deg;
+  transform-origin: bottom;
+}
+
 .search {
   position: absolute;
   top: 12.5rem;
@@ -305,31 +325,134 @@ header:has(.gnb li:hover)::after, header:has(.gnb a:focus)::after {
   background-size: 100% 0.2rem;
 }
 
+.list-hash {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+.list-hash button {
+  font-size: 1.6rem;
+  padding: 0.5rem 1rem;
+}
+.list-hash button.--active {
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+.academy_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 4rem 2rem;
+}
+.academy_list a {
+  position: relative;
+  display: grid;
+}
+.academy_list a .thumbnail {
+  order: 1;
+}
+.academy_list a .category {
+  order: 2;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding-block: 1rem;
+}
+.academy_list a .title {
+  order: 3;
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding: 2rem 0;
+  min-height: 6rem;
+}
+.academy_list a .date {
+  order: 4;
+  font-size: 1.8rem;
+  display: flex;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.thumbnail {
+  position: relative;
+}
+.thumbnail img {
+  width: 100%;
+}
+.thumbnail img .academy_list {
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  height: 100%;
+}
+.thumbnail::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(37, 95, 137, 0.5);
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+}
+.thumbnail:hover::after {
+  opacity: 1;
+}
+
+.badge {
+  background-color: var(--bg);
+  display: inline-flex;
+  font-size: 1.6rem;
+  font-weight: 900;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+.badge.all {
+  --bg: #000;
+}
+.badge.hongdae {
+  --bg: fuchsia;
+}
+.badge.nonsan {
+  --bg: yellowgreen;
+}
+.badge.chuncheon {
+  --bg: orange;
+}
+.badge.daechi {
+  --bg: purple;
+}
+.badge.busan {
+  --bg: skyblue;
+}
+.academy_list .badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
 .playnow .align {
   width: 160rem;
 }
 .playnow .slide-wrap {
   display: flex;
   align-items: center;
-  background: linear-gradient(to right, #000 40rem, transparent 40rem);
+  background: linear-gradient(to right, var(--bg, #000) 40rem, transparent 40rem);
 }
 .playnow .slide-wrap.all {
-  background: linear-gradient(to right, #000 40rem, transparent 40rem);
+  --bg: #000;
 }
 .playnow .slide-wrap.hongdae {
-  background: linear-gradient(to right, fuchsia 40rem, transparent 40rem);
+  --bg: fuchsia;
 }
 .playnow .slide-wrap.nonsan {
-  background: linear-gradient(to right, yellowgreen 40rem, transparent 40rem);
+  --bg: yellowgreen;
 }
 .playnow .slide-wrap.chuncheon {
-  background: linear-gradient(to right, orange 40rem, transparent 40rem);
+  --bg: orange;
 }
 .playnow .slide-wrap.daechi {
-  background: linear-gradient(to right, purple 40rem, transparent 40rem);
+  --bg: purple;
 }
 .playnow .slide-wrap.busan {
-  background: linear-gradient(to right, skyblue 40rem, transparent 40rem);
+  --bg: skyblue;
 }
 .playnow .swiper-slide {
   width: 40rem;
@@ -409,6 +532,10 @@ header:has(.gnb li:hover)::after, header:has(.gnb a:focus)::after {
 }
 .playnow_info .swiper-button-next {
   right: 10rem;
+}
+
+.academy-now {
+  margin-top: 22rem;
 }
 
 /*# sourceMappingURL=index.css.map */

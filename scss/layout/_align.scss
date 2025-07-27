@@ -1,5 +1,6 @@
 @use '../abstracts/' as *;
 
+
 .align {
     display: flex;
     &.both {
@@ -10,4 +11,8 @@
 
 .web-center {
     width: $websize;
+}
+.mx-auto {
+    width: $websize;
+    margin-inline: auto;
 }
