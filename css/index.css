@@ -301,7 +301,7 @@ header:has(.gnb li:hover)::after, header:has(.gnb a:focus)::after {
   font-size: 1.6rem;
   background: linear-gradient(#000, #000) no-repeat center bottom/0 0.2rem;
 }
-.tab-list button:hover, .tab-list button:focus {
+.tab-list button:hover, .tab-list button:focus, .tab-list button.active {
   background-size: 100% 0.2rem;
 }
 
@@ -313,12 +313,31 @@ header:has(.gnb li:hover)::after, header:has(.gnb a:focus)::after {
   align-items: center;
   background: linear-gradient(to right, #000 40rem, transparent 40rem);
 }
+.playnow .slide-wrap.all {
+  background: linear-gradient(to right, #000 40rem, transparent 40rem);
+}
+.playnow .slide-wrap.hongdae {
+  background: linear-gradient(to right, fuchsia 40rem, transparent 40rem);
+}
+.playnow .slide-wrap.nonsan {
+  background: linear-gradient(to right, yellowgreen 40rem, transparent 40rem);
+}
+.playnow .slide-wrap.chuncheon {
+  background: linear-gradient(to right, orange 40rem, transparent 40rem);
+}
+.playnow .slide-wrap.daechi {
+  background: linear-gradient(to right, purple 40rem, transparent 40rem);
+}
+.playnow .slide-wrap.busan {
+  background: linear-gradient(to right, skyblue 40rem, transparent 40rem);
+}
 .playnow .swiper-slide {
   width: 40rem;
 }
 .playnow-slider {
   position: relative;
   height: 56rem;
+  width: calc(100vw - var(--pl) + 45rem);
   overflow: visible;
   overflow-x: hidden;
 }
