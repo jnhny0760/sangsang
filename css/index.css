@@ -313,14 +313,49 @@ header:has(.gnb li:hover)::after, header:has(.gnb a:focus)::after {
   align-items: center;
   background: linear-gradient(to right, #000 40rem, transparent 40rem);
 }
+.playnow .swiper-slide {
+  width: 40rem;
+}
 .playnow-slider {
+  position: relative;
   height: 56rem;
+  overflow: visible;
+  overflow-x: hidden;
+}
+.playnow-slider .swiper-wrapper {
+  height: 99%;
 }
 .playnow-slider img {
   width: 100%;
   height: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
+}
+.playnow_information {
+  position: absolute;
+  inset: 0;
+  padding: 5rem;
+  background-color: #fff;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  display: grid;
+  opacity: 0;
+  grid-template-rows: min-content 1fr min-content min-content;
+  opacity: 0;
+}
+.swiper-slide:hover .playnow_information, .swiper-slide a:focus .playnow_information {
+  opacity: 1;
+  transition: 0.1s;
+}
+.playnow_information_category, .playnow_information_place, .playnow_information_date {
+  font-size: 2.5rem;
+}
+.playnow_information_category {
+  font-weight: 600;
+}
+.playnow_information_title {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-top: 5rem;
 }
 .playnow_info {
   --swiper-navigation-color: #fff;
