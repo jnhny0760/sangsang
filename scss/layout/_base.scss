@@ -3,3 +3,7 @@
 .ally-hidden{
     @include ally-hidden;
 }
+
+body {
+    overflow-x: hidden;
+}

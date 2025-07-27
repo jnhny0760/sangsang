@@ -1,0 +1,81 @@
+.gnb {
+    > ul {
+        display: flex;
+        > li {
+            position: relative;
+            :hover {
+                .gnb ul &{
+                    border-bottom: 0.1rem solid #222;
+                }
+            }
+            > a {
+                display: block;
+                padding-inline: 4rem;
+                font-size: 2rem;
+                font-weight: 600;
+                span  {
+                    display: block;
+                    padding-block: 3rem;
+                    background: linear-gradient(#000, #000) no-repeat center bottom / 0% 0.3rem ;
+                }
+            }
+            &.on {
+                > a span{
+                background-size: 100% 0.3rem;
+                }
+                .depth li {
+                    color: #000;
+                }
+            }
+            &.gnbon {
+                .depth {
+                    grid-template-rows: 1fr;
+                    li {
+                        color: #000;
+                        a:focus {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+        .depth {
+                display: grid;
+                grid-template-rows: 0fr;
+                transition: grid-template-rows 0.2s;
+                position: absolute;
+                inset: 8rem 0 auto;
+                ul {
+                    overflow: hidden;
+                }
+                li {
+                    font-size: 1.7rem;
+                    font-weight: 400;
+                    padding: 1rem 0;
+                    text-align: center;
+                    color: #aaa;
+                    &:hover {
+                        font-weight: 600;
+                    }
+                }
+            }
+    }
+}
+
+header {
+    isolation: isolate;
+    &::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 0;
+        background: linear-gradient(to bottom, #e6e6e6 1px, #fff 1px, #fff);
+        z-index: -1;
+        transition: 0.3s;
+    }
+    &:has(.gnb li:hover)::after,
+    &:has(.gnb a:focus)::after {
+            height: var(--height);
+            inset: auto 0 calc(var(--height) * -1);
+    }
+}

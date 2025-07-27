@@ -4,7 +4,7 @@
 .btn-archive {
     display: inline-flex;
     align-items: center;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 500;
     gap: 0.4rem;
     &::before {
@@ -42,21 +42,21 @@
 }
 
 .btn-search{    
-    width: 5rem;
+    width: 4rem;
     aspect-ratio: 1;
     @include background("ico_search.svg",center, null, contain, size, contain);
     .header & {
         grid-column: 2/3;
         grid-row: 1/3;
-        align-self: center;
+        align-self: end;
     }
     .search & {
-        translate: 0 2.5rem;
+        translate: 0 1.5rem;
     }
 }
 
 .btn-close {
-    width: 3rem;
+    width: 4rem;
     aspect-ratio: 1;
     @include background("ico_close.svg",center, null, contain, size, contain);
     .search & {

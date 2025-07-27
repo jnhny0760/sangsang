@@ -7,6 +7,7 @@
 
     display: flex;
     gap: 2rem;
+    padding: 0 0 1rem 0;
     a {
         font-size: 5rem;
         font-weight: 800;
@@ -15,7 +16,8 @@
         transition: 0.3s;
         @each $color in $colors {
             $index: list.index($colors, $color);
-            &:nth-child(#{$index}):hover {
+            &:nth-child(#{$index}):hover,
+            &:nth-of-type(#{$index}) a:focus {
                 color: $color;
             }
         }

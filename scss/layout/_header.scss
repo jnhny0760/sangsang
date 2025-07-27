@@ -1,9 +1,14 @@
 @use "../abstracts/" as *;
 
 .header {
-    display: grid;
-    grid-template-columns: 1fr min-content;
-    grid-template-rows: 1fr 1fr;
-    max-width: $websize;
-    margin: 10rem auto auto;
+    position: relative;
+    z-index: 1000;
+    .header_wrap{
+        display: grid;
+        grid-template-columns: 1fr min-content;
+        grid-template-rows: 1fr 1fr;
+        max-width: $websize;
+        margin-inline: auto;
+        padding-top: 13rem ;
+    }
 }
