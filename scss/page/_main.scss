@@ -8,6 +8,24 @@
         display: flex;
         align-items: center;
         background: linear-gradient(to right, #000 40rem, transparent 40rem);
+        &.all {
+            background: linear-gradient(to right, #000 40rem, transparent 40rem);
+        }
+        &.hongdae {
+            background: linear-gradient(to right, fuchsia 40rem, transparent 40rem);
+        }
+        &.nonsan {
+            background: linear-gradient(to right, yellowgreen 40rem, transparent 40rem);
+        }
+        &.chuncheon {
+            background: linear-gradient(to right, orange 40rem, transparent 40rem);
+        }
+        &.daechi {
+            background: linear-gradient(to right, purple 40rem, transparent 40rem);
+        }
+        &.busan {
+            background: linear-gradient(to right, skyblue 40rem, transparent 40rem);
+        }
     }
     .swiper-slide {
         width: 40rem;
@@ -15,6 +33,7 @@
     &-slider {
         position: relative;
         height: 56rem;
+        width: calc(100vw - var(--pl) + 45rem);
         overflow: visible;
         overflow-x: hidden;
         .swiper-wrapper {
