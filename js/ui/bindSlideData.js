@@ -1,6 +1,6 @@
 export const bindSlideData = (array) => {
     const slideWrap = document.querySelector(".playnow-slider .swiper-wrapper")
-
+    
     const slideArray = array.map((item) => {
     const {image, categopry, title, place, date} = item;
         return`
