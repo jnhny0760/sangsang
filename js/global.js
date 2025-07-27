@@ -1,8 +1,14 @@
 import { Search } from "./ui/Search.js";
+import { Slide } from "./ui/Slider.js";
+import { initGnb } from "./ui/Gnb.js";
+import { Tab } from "./ui/Tab.js";
+import { MainSlide } from "./ui/MainSlide.js";
+import { MainSlide } from "./ui/bindSlideData.js";
+
+
 Search("result.html");
-
-import { initGnb } from "./ui/gnb.js";
 initGnb();
-
-import { Slide } from "./ui/slider.js";
 Slide();
+Tab('.tab-list');
+MainSlide();
+bindSlideData();

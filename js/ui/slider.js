@@ -3,6 +3,7 @@ import { mainSlideData } from "../../data/mainSlideData.js"
 
 export const Slide = () => {
     const slideWrap = document.querySelector(".playnow-slider .swiper-wrapper")
+
     const slideArray = mainSlideData.map((item) => {
     const {image, categopry, title, place, date} = item;
         return`
@@ -17,9 +18,9 @@ export const Slide = () => {
                 </div>
             </a>
         </div>
-        `
+        `;
     });
-    slideWrap.innerHTML = slideArray.join('');
+    slideWrap.innerHTML = slideArray.join("");
     
     const slideSize = () => {
         const webCenter = document.querySelector(".header_wrap").offsetWidth;
@@ -27,6 +28,7 @@ export const Slide = () => {
         const paddingHalf = (innerWidth - webCenter) / 2;
         playnowEl.style.width = `${innerWidth - paddingHalf}px`;
         playnowEl.style.marginLeft = `${paddingHalf}px`;
+        playnowEl.style.setProperty("--pl", `${paddingHalf}px`);
     }
     
     slideSize();
