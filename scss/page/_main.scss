@@ -1,0 +1,57 @@
+@use "../abstracts/" as *;
+
+.playnow {
+    .align {
+        width: $websize;    
+    }
+    .slide-wrap {
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to right, #000 40rem, transparent 40rem);
+    }
+    &-slider {
+        height: 56rem;
+        img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+        }
+    }
+    &_info {
+        --swiper-navigation-color: #fff;
+        --swiper-navigation-size: 2rem;
+        --swiper-scrollbar-bg-color: #444;
+        --swiper-scrollbar-drag-bg-color: #fff;
+        --swiper-scrollbar-sides-offset: 3.5rem;
+        --swiper-scrollbar-bottom: 20%;
+        
+        position: relative;
+        width: 45rem;
+        padding: 9rem 0 0 5rem;
+        height: 75rem;
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 3.6rem;
+        font-weight: 500;
+        span {
+           display: block;
+           font-size: 4.4rem;
+           padding-top: 1rem; 
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            border: 0.1rem solid #fff;
+            border-radius: 5rem;
+            padding: 1.5rem 2rem;
+            top: 87%;
+        }
+        
+        .swiper-button-prev {
+            left: 3rem;
+        }
+        .swiper-button-next {
+            right: 10rem;
+        }
+    }
+}

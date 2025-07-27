@@ -1,4 +1,4 @@
-export const Search = (url) => {
+export const Search = (keyward) => {
 
     const openSearch = document.querySelector('.header .btn-search');
     const closeSearch = document.querySelector('.search .btn-close');
@@ -19,7 +19,7 @@ export const Search = (url) => {
 
         const isValue = input.value;
         
-        location.href = `/${url}?searchKeyWord=${isValue}`;
+        location.href = `/${keyward}?searchKeyWord=${isValue}`;
         return isValue;
     });
 };

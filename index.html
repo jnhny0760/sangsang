@@ -6,33 +6,137 @@
     <title>KT&G 상상마당</title>
     <link rel="stylesheet" href="./css/index.css">
     <script type="module" src="./js/global.js"></script>
+    <script type="module" src="./js/ui/gnb.js"></script>
     <link rel="shortcut icon" href="#">
 </head>
 <body>
     <header class="header">
-        <h1 class="logo"><a href="/"><img src="./images/logo.svg" alt="KT&G 상상마당"></a></h1>
-        <h2 class="ally-hidden">지점바록가기</h2>
-        <ul class="familysite">
-            <li><a href="/">Hongdae</a></li>
-            <li><a href="/">Nonsan</a></li>
-            <li><a href="/">Chuncheon</a></li>
-            <li><a href="/">Daechi</a></li>
-            <li><a href="/">Busan</a></li>
-        </ul>
-        <button class="btn-search" aria-label="검색"></button>
-        <div class="utility">
-            <div> 
-                <a href="/" class="btn-archive">Archive</a>
-                <a href="/" class="btn-calender">Calendar</a>
+        <div class="header_wrap">
+            <div class="utility">
+                <div> 
+                    <a href="/" class="btn-archive">Archive</a>
+                    <a href="/" class="btn-calender">Calendar</a>
+                </div>
             </div>
+            <h1 class="logo"><a href="/"><img src="./images/logo.svg" alt="KT&G 상상마당"></a></h1>
+            <h2 class="ally-hidden">지점바록가기</h2>
+            <ul class="familysite">
+                <li><a href="/">Hongdae</a></li>
+                <li><a href="/">Nonsan</a></li>
+                <li><a href="/">Chuncheon</a></li>
+                <li><a href="/">Daechi</a></li>
+                <li><a href="/">Busan</a></li>
+            </ul>
+            <button class="btn-search" aria-label="검색"></button>
+            <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="/"><span>상상마당</span></a>
+                        <div class="depth">
+                            <ul>
+                                <li><a href="/"><span>홍대</span></a></li>
+                                <li><a href="/"><span>논산</span></a></li>
+                                <li><a href="/"><span>춘천</span></a></li>
+                                <li><a href="/"><span>대치</span></a></li>
+                                <li><a href="/"><span>부산</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/"><span>프로그램</span></a>
+                        <div class="depth">
+                            <ul>
+                                <li><a href="/"><span>공연</span></a></li>
+                                <li><a href="/"><span>영화</span></a></li>
+                                <li><a href="/"><span>전시</span></a></li>
+                                <li><a href="/"><span>교육</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/"><span>숙박&middot;대관</span></a>
+                        <div class="depth">
+                            <ul>
+                                <li><a href="/"><span>대관안내</span></a></li>
+                                <li><a href="/"><span>춘천스테이</span></a></li>
+                                <li><a href="/"><span>부산스테이</span></a></li>
+                                <li><a href="/"><span>아트캠핑빌리지</span></a></li>
+                                <li><a href="/"><span>문화예술교육센터</span></a></li>
+                                <li><a href="/"><span>부산 플레잉룸</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/"><span>F&B</span></a>
+                        <div class="depth">
+                            <ul>
+                                <li><a href="/"><span>카페 사푼사푼</span></a></li>
+                                <li><a href="/"><span>댄싱 카페인</span></a></li>
+                                <li><a href="/"><span>세인트콕스</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/"><span>디자인스퀘어</span></a>
+                    </li>
+                    <li>
+                        <a href="/"><span>소식&middot;공지</span></a>
+                        <div class="depth">
+                            <ul>
+                                <li><a href="/"><span>공모/지원사업</span></a></li>
+                                <li><a href="/"><span>소식/이벤트</span></a></li>
+                                <li><a href="/"><span>웹진</span></a></li>
+                                <li><a href="/"><span>공지사항</span></a></li>
+                                <li><a href="/"><span>문의처</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <dialog class="search">
+        <button class="btn-close" aria-label="닫기"></button>
         <form>
             <input type="search" name="" id="" placeholder="검색어를 입력해주세요">
             <button class="btn-search" aria-label="검색"></button>
         </form>
-        <button class="btn-close" aria-label="닫기"></button>
     </dialog>
+    <main>
+        <section class="playnow">
+            <div class="align both web-center">
+                <h2 class="heading md">Play Now</h2>
+                <nav>
+                    <ul class="tab-list">
+                        <li><button>전체</button></li>
+                        <li><button>홍대</button></li>
+                        <li><button>논산</button></li>
+                        <li><button>춘천</button></li>
+                        <li><button>대치</button></li>
+                        <li><button>부산</button></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="slide-wrap">
+                <div class="playnow_info">
+                    <h3>상상마당<br/><span>전체</span></h3>
+                    <div class="swiper-scrollbar"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper playnow-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./images/slide_1.png"></div>
+                        <div class="swiper-slide"><img src="./images/slide_2.png"></div>
+                        <div class="swiper-slide"><img src="./images/slide_3.jpg"></div>
+                        <div class="swiper-slide"><img src="./images/slide_4.jpg"></div>
+                        <div class="swiper-slide"><img src="./images/slide_5.jpg"></div>
+                        <div class="swiper-slide"><img src="./images/slide_6.jpg"></div>
+                        <div class="swiper-slide"><img src="./images/slide_7.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
