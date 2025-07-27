@@ -1,0 +1,13 @@
+@use '../abstracts/' as *;
+
+.align {
+    display: flex;
+    &.both {
+        justify-content: space-between;
+        align-items: anchor-center;
+    }
+}
+
+.web-center {
+    width: $websize;
+}
