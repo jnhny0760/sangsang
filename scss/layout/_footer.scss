@@ -1,0 +1,166 @@
+@use "../abstracts/" as *;
+@use "./base" as *;
+
+.footer{
+    background-color: #000;
+    color: #fff;
+    padding: 6.5rem 0;
+    margin-top: 18rem;
+    &_wrap {
+        @extend .mx-auto;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        .left,
+        .comapnny_info ul, 
+        .footer_link {
+            display: flex;
+        }
+        .left {
+            flex-direction: column;
+            .comapnny_info ul li{
+                padding: 0 2rem;
+                border-right: 0.1rem solid #fff;
+                &:nth-of-type(1) {
+                    padding-left: 0;
+                }
+                &:last-of-type {
+                    border: none;
+                }
+            }
+            .copyright{
+                margin: 2rem 0 5rem;
+            }
+        }
+    }
+}
+.footer_link{
+    strong {
+        font-weight: 600;
+    }
+}
+.footer_btn {
+    display: flex;
+    gap: 1.5rem;
+    border: 1px solid #5e5e5e;
+    background-color: transparent;
+    font-size: 1.6rem;
+    padding: 1rem 1.5em;
+    margin-right: 2rem;
+    color: #fff;
+    &::after {
+        content: '';
+        @include background('ico_arrow_up.svg', center, transparent);
+        width: 2rem;
+        aspect-ratio: 1;
+        transition: rotate 0.5s;
+    }
+    &[popovertarget="familysite"] {
+        anchor-name: --familysite;
+    }
+    &[popovertarget="hongdae_link"] {
+        anchor-name: --hongdae_link;
+    }
+    &[popovertarget="nonsan_link"] {
+        anchor-name: --nonsan_link;
+    }
+    &[popovertarget="chuncheon_link"] {
+        anchor-name: --chuncheon_link;
+    }
+    &[popovertarget="daechi_link"] {
+        anchor-name: --daechi_link;
+    }
+    &[popovertarget="busan_link"] {
+        anchor-name: --busan_link;
+    }
+}
+
+#familysite {
+    inset: auto auto anchor(--familysite top) anchor(--familysite left);
+    width: anchor-size(--familysite);
+    overflow: hidden;
+    li {
+        padding: 1rem 2rem;
+        font-weight: 400;
+    }
+}
+#hongdae_link {
+    inset: auto auto anchor(--hongdae_link -30%) anchor(--hongdae_link -70%);
+    width: 26rem;
+    padding: 2rem;
+    overflow: hidden;
+}
+#nonsan_link {
+    inset: auto auto anchor(--nonsan_link -30%) anchor(--nonsan_link -70%);
+    width: 26rem;
+    padding: 2rem;
+    overflow: hidden;
+}
+#chuncheon_link {
+    inset: auto auto anchor(--chuncheon_link -30%) anchor(--chuncheon_link -70%);
+    width: 26rem;
+    padding: 2rem;
+    overflow: hidden;
+}
+#daechi_link {
+    inset: auto auto anchor(--daechi_link -30%) anchor(--daechi_link -70%);
+    width: 26rem;
+    padding: 2rem;
+    overflow: hidden;
+}
+#busan_link {
+    inset: auto auto anchor(--busan_link -30%) anchor(--busan_link -70%);
+    width: 26rem;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+body:has(#familysite:popover-open) {
+    [popovertarget="familysite"]::after {
+        rotate: 180deg;
+    }
+}
+body:has(#hongdae_link:popover-open) {
+    [popovertarget="hongdae_link"]::after {
+        rotate: 180deg;
+    }
+}
+body:has(#nonsan_link:popover-open) {
+    [popovertarget="nonsan_link"]::after {
+        rotate: 180deg;
+    }
+}
+body:has(#chuncheon_link:popover-open) {
+    [popovertarget="chuncheon_link"]::after {
+        rotate: 180deg;
+    }
+}
+body:has(#daechi_link:popover-open) {
+    [popovertarget="daechi_link"]::after {
+        rotate: 180deg;
+    }
+}
+body:has(#busan_link:popover-open) {
+    [popovertarget="busan_link"]::after {
+        rotate: 180deg;
+    }
+}
+.sns {
+    display: flex;
+    >li {
+        margin-left: 1rem;
+    }
+    a {
+        display: block;
+        width: 6rem;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        background-color: #fff;
+    }
+    svg {
+        padding: 2rem;
+        width: 2rem;
+        height: 2rem;
+        color: #000;
+    }
+}
