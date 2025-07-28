@@ -2,14 +2,15 @@
     display: flex;
     gap: 1.5rem;
     button {
+        $lineWidth: 0.2rem;
         padding: 0 0 0.4rem;
         background-color: transparent;
         font-size: 1.6rem;
-        background: linear-gradient(#000, #000) no-repeat center bottom / 0 0.2rem;
+        background: linear-gradient(#000, #000) no-repeat center bottom / 0 $lineWidth;
         &:hover,
         &:focus,
         &.active {
-            background-size: 100% 0.2rem;
+            background-size: 100% $lineWidth;
         }
     }
 }

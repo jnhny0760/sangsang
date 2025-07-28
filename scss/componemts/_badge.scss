@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+.badge {
+    @include category;
+    background-color: var(--bg);
+    display: inline-flex;
+    font-size: 1.6rem;
+    font-weight: 900;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    .academy_list & {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+}

@@ -3,12 +3,12 @@ import { Slide } from "./ui/Slider.js";
 import { initGnb } from "./ui/Gnb.js";
 import { Tab } from "./ui/Tab.js";
 import { MainSlide } from "./ui/MainSlide.js";
-import { bindSlideData } from "./ui/bindSlideData.js";
-
+import { Academy , AcademyHash} from "./ui/Academy.js"
 
 Search("result.html");
 initGnb();
 Slide();
 Tab('.tab-list');
 MainSlide();
-bindSlideData();
+Academy();
+AcademyHash();

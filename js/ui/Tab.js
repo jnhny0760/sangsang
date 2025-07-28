@@ -1,14 +1,36 @@
-export const Tab = (target) => {
+export const Tab = (target, options = {}) => {
+    const config = {
+        className : "--active",
+        buttonEl : "button",
+        ...options,
+    };
+ 
+    const {className, buttonEl} = config;
+
     const tabWrap = document.querySelector(target);
-    const tabButtons = tabWrap.querySelectorAll('button');
+
+    if (!tabWrap) return;
+
+    const tabButtons = tabWrap.querySelectorAll(buttonEl);
+
+    const bindEvent = (el) => {
+        el.addEventListener("click", () => {
+            removeClass();
+            addClass(el);
+        });
+    };
+
+    const removeClass = () => {
+        tabButtons.forEach((button) => {
+            button.classList.remove(className);
+        });
+    };
+
+    const addClass = (button) => {
+        button.classList.add(className);
+    };
 
     tabButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            tabButtons.forEach((btn) => {
-                btn.classList.remove('active');
-            });
-
-            button.classList.add('active');
-        });
+        bindEvent(button);
     });
 };

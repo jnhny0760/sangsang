@@ -2,7 +2,7 @@ import { mainSlideData } from "../../data/mainSlideData.js";
 import { bindSlideData } from "./bindSlideData.js";
 
 
-const filterData = (keyward) => {
+const filterDate = (keyward) => {
     const result = mainSlideData.filter((item) => {
         return item.tabId === keyward;
     });
@@ -29,23 +29,23 @@ export const MainSlide = () => {
                     break;
                 case '홍대':
                     info.classList.add('hongdae');
-                    filterData('hongdae');
+                    filterDate('hongdae');
                     break;
                 case '논산':
                     info.classList.add('nonsan');
-                    filterData('nonsan');
+                    filterDate('nonsan');
                     break;
                 case '춘천':
                     info.classList.add('chuncheon');
-                    filterData('chuncheon');
+                    filterDate('chuncheon');
                     break;
                 case '대치':
                     info.classList.add('daechi');
-                    filterData('daechi');
+                    filterDate('daechi');
                     break;
                 case '부산':
                     info.classList.add('busan');
-                    filterData('busan');
+                    filterDate('busan');
                     break;
             
                 default:

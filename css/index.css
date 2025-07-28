@@ -32,6 +32,11 @@ body {
   overflow-x: hidden;
 }
 
+.mx-auto, .academy-now {
+  width: 160rem;
+  margin-inline: auto;
+}
+
 .header {
   position: relative;
   z-index: 1000;
@@ -218,6 +223,7 @@ input[type=search]::-webkit-search-results-decoration {
   align-content: center;
   border: none;
   padding: 5rem 0 0 0;
+  z-index: 9999;
 }
 .search form {
   padding: 2rem 0;
@@ -333,6 +339,7 @@ header:has(.gnb li:hover)::after, header:has(.gnb a:focus)::after {
 .list-hash button {
   font-size: 1.6rem;
   padding: 0.5rem 1rem;
+  border: 1px solid transparent;
 }
 .list-hash button.--active {
   background-color: #fff;
@@ -434,25 +441,25 @@ header:has(.gnb li:hover)::after, header:has(.gnb a:focus)::after {
 .playnow .slide-wrap {
   display: flex;
   align-items: center;
-  background: linear-gradient(to right, var(--bg, #000) 40rem, transparent 40rem);
+  background: linear-gradient(to right, #000 40rem, transparent 40rem);
 }
 .playnow .slide-wrap.all {
-  --bg: #000;
+  background: linear-gradient(to right, #000 40rem, transparent 40rem);
 }
 .playnow .slide-wrap.hongdae {
-  --bg: fuchsia;
+  background: linear-gradient(to right, fuchsia 40rem, transparent 40rem);
 }
 .playnow .slide-wrap.nonsan {
-  --bg: yellowgreen;
+  background: linear-gradient(to right, yellowgreen 40rem, transparent 40rem);
 }
 .playnow .slide-wrap.chuncheon {
-  --bg: orange;
+  background: linear-gradient(to right, orange 40rem, transparent 40rem);
 }
 .playnow .slide-wrap.daechi {
-  --bg: purple;
+  background: linear-gradient(to right, purple 40rem, transparent 40rem);
 }
 .playnow .slide-wrap.busan {
-  --bg: skyblue;
+  background: linear-gradient(to right, skyblue 40rem, transparent 40rem);
 }
 .playnow .swiper-slide {
   width: 40rem;
